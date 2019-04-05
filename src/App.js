@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import './App.css';
 
@@ -10,6 +10,13 @@ class App extends Component {
             <h3 class="col">Popular Products</h3>
             <hr/>
           </header>
+
+          <div className="row search-bar">
+            <div className="col">
+              <input placeholder="Search Products"/>
+            </div>
+          </div>
+
         </div>
     );
   }
