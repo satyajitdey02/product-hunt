@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import SearchBar from "./components/SearchBar";
 import ResultItem from "./components/ResultItem";
 import './App.css';
+import ResultList from "./components/ResultList";
 
 class App extends Component {
   render() {
@@ -15,12 +16,7 @@ class App extends Component {
           <SearchBar onSearchChange={term => this.onSearch(term)}/>
 
           <div className="row search-results">
-            <ul className="col result-list">
-              <ResultItem key={1}/>
-              <ResultItem key={2}/>
-              <ResultItem key={3}/>
-              <ResultItem key={4}/>
-            </ul>
+            <ResultList/>
           </div>
 
         </div>
