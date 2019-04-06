@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import SearchBar from "./components/SearchBar";
 import './App.css';
 
 class App extends Component {
@@ -11,11 +11,7 @@ class App extends Component {
             <hr/>
           </header>
 
-          <div className="row search-bar">
-            <div className="col">
-              <input placeholder="Search Products"/>
-            </div>
-          </div>
+          <SearchBar onSearchChange={term => this.onSearch(term)}/>
 
           <div className="row search-results">
             <ul className="col result-list">
