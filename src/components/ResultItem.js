@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Vote from "./Vote";
 
 class ResultItem extends Component {
   state = {
@@ -18,10 +19,7 @@ class ResultItem extends Component {
                     alt="Prod-1"/>
               </div>
               <div className="content">
-                <div className="vote">
-                  &#x25B2;
-                  <span> {this.state.vote}</span>
-                </div>
+                <Vote/>
                 <h3 className="prodTitle">
                   Product Mindset
                 </h3>
