@@ -12,3 +12,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.search-bar {
+  margin: 20px;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 75%;
+}
+
+.search-results {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.result-item:hover {
+  background-color: #eee;
+}
+
+ul.result-list {
+  list-style: none;
+}
+
+.content {
+  text-align: left;
+}
+.content h3, p {
+  margin: 0;
+}
+
+.thumbnail {
+  float: left;
+  width: 160px;
+  margin-right: 20px;
+}
+
+.thumbnail img {
+  width: 160px;
+  height: 160px;
+}
+
+a.product-link { color: inherit; text-decoration: none}
+
+.credit img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

@@ -9,28 +9,26 @@ class ResultItem extends Component {
 
   render() {
     return (
-        <li className="resultItem clearLeft">
-          <div className="itemWrapper">
-            <a href="/" className="productLink">
+        <li className="result-item clearfix">
+          <a href="/" className="product-link">
+            <div className="thumbnail">
+              <img
+                  src="https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+                  alt="Prod-1"/>
+            </div>
+            <div className="content">
+              <Vote/>
 
-              <div className="thumbnail">
-                <img
-                    src="https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
-                    alt="Prod-1"/>
-              </div>
-              <div className="content">
-                <Vote/>
-                <h3 className="prodTitle">
-                  Product Mindset
-                </h3>
-                <p className="prodDetails">Free book on how to get inside
-                  your customer’s mind</p>
+              <h3 className="title">
+                Product Mindset
+              </h3>
 
-                <ByLine/>
+              <p className="leadtext">Free book on how to get inside
+                your customer’s mind</p>
 
-              </div>
-            </a>
-          </div>
+              <ByLine/>
+            </div>
+          </a>
         </li>
     );
   }
