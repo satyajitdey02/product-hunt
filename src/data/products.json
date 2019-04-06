@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "title": "Title: Product - 1",
+    "leadtext": "Leadtext: Product - 1",
+    "vote": 4,
+    "image": {
+      "src": "https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+    },
+    "credit": {
+      "name": "Satyajit Dey",
+      "photo": {
+        "src": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png"
+      },
+      "link": "http://profile-link.com/1"
+    },
+    "url": "https://www.producthunt.com/posts/gaia-gps"
+  },
+  {
+    "id": 2,
+    "title": "Title: Product - 2",
+    "leadtext": "Leadtext: Product - 2",
+    "vote": 3,
+    "image": {
+      "src": "https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+    },
+    "credit": {
+      "name": "Satyajit Dey",
+      "photo": {
+        "src": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png"
+      },
+      "link": "http://profile-link.com/1"
+    },
+    "url": "https://www.producthunt.com/posts/gaia-gps"
+  },
+  {
+    "id": 3,
+    "title": "Title: Product - 3",
+    "leadtext": "Leadtext: Product - 3",
+    "vote": 2,
+    "image": {
+      "src": "https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+    },
+    "credit": {
+      "name": "Satyajit Dey",
+      "photo": {
+        "src": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png"
+      },
+      "link": "http://profile-link.com/1"
+    },
+    "url": "https://www.producthunt.com/posts/gaia-gps"
+  },
+  {
+    "id": 4,
+    "title": "Title: Product - 4",
+    "leadtext": "Leadtext: Product - 4",
+    "vote": 1,
+    "image": {
+      "src": "https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+    },
+    "credit": {
+      "name": "Satyajit Dey",
+      "photo": {
+        "src": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png"
+      },
+      "link": "http://profile-link.com/1"
+    },
+    "url": "https://www.producthunt.com/posts/gaia-gps"
+  },
+  {
+    "id": 5,
+    "title": "Title: Product - 22",
+    "leadtext": "Leadtext: Product - 2",
+    "vote": 0,
+    "image": {
+      "src": "https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+    },
+    "credit": {
+      "name": "Satyajit Dey",
+      "photo": {
+        "src": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png"
+      },
+      "link": "http://profile-link.com/1"
+    },
+    "url": "https://www.producthunt.com/posts/gaia-gps"
+  }
+]

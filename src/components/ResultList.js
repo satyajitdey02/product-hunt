@@ -1,23 +1,17 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ResultItem from "./ResultItem";
+import PropTypes from 'prop-types';
 
-class ResultList extends Component {
-  state = {
-    list: []
-  };
+const ResultList = ({list}) => {
+  let liMarkup = list.map(
+      item => <ResultItem key={item.id} item={item}/>);
+  return (
+      <ul className="col result-list">
+        {liMarkup}
+      </ul>
+  );
+};
 
-  render(){
-    return(
-        <ul className="col result-list">
-          <ResultItem key={1}/>
-          <ResultItem key={2}/>
-          <ResultItem key={3}/>
-          <ResultItem key={4}/>
-        </ul>
-    );
-  }
-}
-
-ResultList.propTypes = {};
+ResultList.propTypes = {list: PropTypes.array};
 
 export default ResultList;
