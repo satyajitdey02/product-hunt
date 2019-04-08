@@ -12,6 +12,10 @@ class App extends Component {
     products: []
   };
 
+  componentDidMount() {
+    this.onSearch('');
+  }
+
   render() {
     return (
         <div className="container App">
