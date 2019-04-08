@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const Vote = ({score}) => {
-  return (
-      <div className="vote">
-        &#x25B2;
-        <span> {score}</span>
-      </div>
-  );
-};
+class Vote extends Component {
+
+  render() {
+    return (
+        <button className="vote" onClick={this.props.voteUp}>
+          &#x25B2;
+          <span> {this.props.score}</span>
+        </button>
+    );
+  }
+}
 
 Vote.propTypes = {};
 
