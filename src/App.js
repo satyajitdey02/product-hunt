@@ -9,16 +9,23 @@ import './App.css';
 class App extends Component {
 
   state = {
-    products: []
+    products: [],
+    searchResults: []
   };
 
   componentDidMount() {
+    products.forEach(p => {
+      let items = App.destructureProduct(p);
+      this.state.products.push(items);
+      this.state.searchResults.push(items);
+    });
+
     this.onSearch('');
   }
 
   appCallback = () => {
-    this.state.products.sort((a, b) => b.vote - a.vote);
-    this.setState({products: this.state.products});
+    this.state.searchResults.sort((a, b) => b.vote - a.vote);
+    this.setState({searchResults: this.state.searchResults});
   };
 
   render() {
@@ -32,7 +39,7 @@ class App extends Component {
           <SearchBar onSearchChange={term => this.onSearch(term)}/>
 
           <div className="row search-results">
-            <ResultList list={this.state.products}
+            <ResultList list={this.state.searchResults}
                         appCallback={this.appCallback}/>
           </div>
 
@@ -61,24 +68,24 @@ class App extends Component {
   }
 
   onSearch(searchTerm) {
-    this.setState({products: []});
+    this.setState({searchResults: []});
     let resultItems = [];
     if (searchTerm.trim()) {
       console.log('searchTerm: ' + searchTerm);
-      products.forEach(p => {
+      this.state.products.forEach(p => {
         if (p.title.indexOf(searchTerm) > 0) {
-          resultItems.push(App.destructureProduct(p));
+          resultItems.push(p);
         }
 
       });
     } else {
-      products.forEach(p => {
-        resultItems.push(App.destructureProduct(p));
+      this.state.products.forEach(p => {
+        resultItems.push(p);
       });
     }
 
     resultItems.sort((a, b) => b.vote - a.vote);
-    this.setState({products: resultItems});
+    this.setState({searchResults: resultItems});
   }
 }
 
