@@ -5,6 +5,7 @@ import ResultList from "./components/ResultList";
 import products from './data/products';
 
 import './App.css';
+import Header from "./components/Header";
 
 class App extends Component {
 
@@ -39,10 +40,7 @@ class App extends Component {
   render() {
     return (
         <div className="container App">
-          <header className="row header">
-            <h3 className="col">Popular Products</h3>
-            <hr/>
-          </header>
+          <Header heading='Popular Products'/>
 
           <SearchBar onSearchChange={term => this.onSearch(term)}/>
 
@@ -51,7 +49,6 @@ class App extends Component {
                         searchResults={this.state.searchResults}
                         appCallback={this.appCallback}/>
           </div>
-
         </div>
     );
   }
