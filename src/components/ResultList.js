@@ -1,18 +1,22 @@
 import React, {Component} from 'react';
 import ResultItem from "./ResultItem";
+import MessageBox from "./MessageBox";
 
 class ResultList extends Component {
 
   render() {
-    let liMarkup = this.props.list.map(
-        item => <ResultItem key={item.id} item={item}
-                            resultListCallback={this.resultListCallback}/>);
+    if (this.props.searchResults.length <= 0) {
+      let message = `No result found for the query: "${this.props.searchTerm}"`;
+      return (<MessageBox message={message}/>);
+    }
 
-    return (
-        <ul className="col result-list">
-          {liMarkup}
-        </ul>
-    );
+    let liMarkup = this.props.searchResults.map(
+        item => <ResultItem key={item.id}
+                            item={item}
+                            resultListCallback={this.resultListCallback}/>);
+    return (<ul className="col result-list">
+      {liMarkup}
+    </ul>);
   }
 
   resultListCallback = () => {
