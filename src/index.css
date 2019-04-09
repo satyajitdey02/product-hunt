@@ -2,45 +2,104 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  monospace;
 }
 
+header.row.header {
+  margin: 20px 0 20px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.header h3 {
+  font-weight: bold;
+  color: #212121;
+}
 
 .search-bar {
-  margin: 20px;
+  margin: 20px 0 20px 0;
   text-align: center;
 }
 
+.search-bar .col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .search-bar input {
-  width: 75%;
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
 }
 
 .search-results {
-  width: 800px;
   margin: 0 auto;
 }
 
-.result-item:hover {
+/*.result-item:hover {
   background-color: #eee;
-}
+}*/
 
 ul.result-list {
   list-style: none;
 }
 
+li.result-item {
+  margin: 20px 0;
+}
+
 .content {
   text-align: left;
 }
+
+.content button.vote img {
+  width: 16px;
+  height: 16px;
+}
+
+.content button.vote {
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.content button.vote .score  {
+  color: #262626;
+  font-weight: 800;
+}
+
+.content button.vote:hover {
+  background-color: #eee;
+}
+
 .content h3, p {
   margin: 0;
+}
+
+.content h3 {
+  color: #4584c3;
+}
+
+p.leadtext {
+  color: #262626;
+  font-weight: 500;
+}
+
+.credit {
+  margin-top: 20px;
+}
+
+.credit span.submitted {
+  color: #999999;
+  font-weight: 500;
 }
 
 .thumbnail {
@@ -54,7 +113,10 @@ ul.result-list {
   height: 160px;
 }
 
-a.product-link { color: inherit; text-decoration: none}
+a.product-link {
+  color: inherit;
+  text-decoration: none
+}
 
 .credit img {
   width: 30px;
