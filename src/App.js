@@ -84,12 +84,16 @@ class App extends Component {
     this.setState({searchResults: resultItems});
   }
 
+  /*
+  * In this method the searchTerm is searched into the concatenated text of
+  * title and leadtext and sorted in descending order of vote before return
+  **/
   searchByTerm(searchTerm) {
     let results = [];
     if (searchTerm.trim()) {
-      console.log('searchTerm: ' + searchTerm);
       this.state.products.forEach(p => {
-        if (p.title.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) {
+        let text = `${p.title} ${p.leadtext}`.toLowerCase();
+        if (text.indexOf(searchTerm.toLowerCase()) >= 0) {
           results.push(p);
         }
 
