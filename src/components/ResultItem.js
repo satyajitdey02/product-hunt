@@ -27,7 +27,7 @@ class ResultItem extends Component {
 
             <p className="leadtext">{this.props.item.leadtext}</p>
 
-            <ByLine/>
+            <ByLine credit={this.props.item.credit}/>
           </div>
 
         </li>

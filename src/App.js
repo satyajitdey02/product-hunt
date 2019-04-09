@@ -56,7 +56,7 @@ class App extends Component {
   static destructureProduct(product) {
     const {
       id, title, leadtext, vote,
-      image: {src}, credit: {name, photo: {src: photoLink}, link}, url
+      image: {src}, credit, url
     } = product;
 
     let result = {};
@@ -65,9 +65,7 @@ class App extends Component {
     result.leadtext = leadtext;
     result.vote = vote;
     result.image = src;
-    result.creditName = name;
-    result.creditPhoto = photoLink;
-    result.creditLink = link;
+    result.credit = credit;
     result.url = url;
 
     return result;
