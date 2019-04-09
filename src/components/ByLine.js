@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const ByLine = () => {
 
@@ -13,7 +12,5 @@ const ByLine = () => {
   );
 
 };
-
-ByLine.propTypes = {};
 
 export default ByLine;
