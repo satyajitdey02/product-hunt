@@ -1,87 +1,138 @@
 [
   {
     "id": 1,
-    "title": "Title: Product - 1",
-    "leadtext": "Leadtext: Product - 1",
-    "vote": 4,
+    "title": "hummingbot",
+    "leadtext": "Automate crypto trading with your own market making bot",
+    "vote": 113,
     "image": {
-      "src": "https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+      "src": "https://ph-files.imgix.net/ae11a7b0-ac52-48e7-94d9-58ec2ff5f42c?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
     },
     "credit": {
-      "name": "Satyajit Dey",
+      "name": "Yingdan Liang",
       "photo": {
-        "src": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png"
+        "src": "https://ph-avatars.imgix.net/1318098/original?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=140&h=140&fit=crop&dpr=2"
       },
-      "link": "http://profile-link.com/1"
+      "link": "https://www.producthunt.com/@yingdan"
     },
-    "url": "https://www.producthunt.com/posts/gaia-gps"
+    "url": "https://www.hummingbot.io"
   },
   {
     "id": 2,
-    "title": "Title: Product - 2",
-    "leadtext": "Leadtext: Product - 2",
-    "vote": 3,
+    "title": "Payouts Direct by Cashfree",
+    "leadtext": "All your business bank accounts linked and automated",
+    "vote": 164,
     "image": {
-      "src": "https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+      "src": "https://ph-files.imgix.net/874daaad-14da-4efb-a19b-d2cd1a070c99?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
     },
     "credit": {
-      "name": "Satyajit Dey",
+      "name": "Naman Sarawagi",
       "photo": {
-        "src": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png"
+        "src": "https://ph-avatars.imgix.net/127163/original?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=140&h=140&fit=crop&dpr=2"
       },
-      "link": "http://profile-link.com/1"
+      "link": "https://www.producthunt.com/@namansr"
     },
-    "url": "https://www.producthunt.com/posts/gaia-gps"
+    "url": "https://www.producthunt.com/posts/payouts-direct-by-cashfree"
   },
   {
     "id": 3,
-    "title": "Title: Product - 3",
-    "leadtext": "Leadtext: Product - 3",
-    "vote": 2,
+    "title": "Elements for WordPress",
+    "leadtext": "Free templates & premium stock photos from Envato Elements",
+    "vote": 99,
     "image": {
-      "src": "https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+      "src": "https://ph-files.imgix.net/885a2d2f-e9f7-4b66-b3b2-fde1e268e919?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
     },
     "credit": {
-      "name": "Satyajit Dey",
+      "name": "Collis",
       "photo": {
-        "src": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png"
+        "src": "https://ph-avatars.imgix.net/72218/original?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=140&h=140&fit=crop&dpr=2"
       },
-      "link": "http://profile-link.com/1"
+      "link": "https://www.producthunt.com/@collis"
     },
-    "url": "https://www.producthunt.com/posts/gaia-gps"
+    "url": "https://elements.envato.com/extensions/wordpress?ref=producthunt"
   },
   {
     "id": 4,
-    "title": "Title: Product - 4",
-    "leadtext": "Leadtext: Product - 4",
-    "vote": 1,
+    "title": "Digital Socrates 2.0",
+    "leadtext": "Questions to train your mind.",
+    "vote": 100,
     "image": {
-      "src": "https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+      "src": "https://ph-files.imgix.net/8c75fe36-7ac8-408e-a709-04fcf9ebe8cc?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
     },
     "credit": {
-      "name": "Satyajit Dey",
+      "name": "Ben Issenmann",
       "photo": {
-        "src": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png"
+        "src": "https://ph-avatars.imgix.net/174654/original?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=140&h=140&fit=crop&dpr=2"
       },
-      "link": "http://profile-link.com/1"
+      "link": "https://www.producthunt.com/@bissenmann"
     },
-    "url": "https://www.producthunt.com/posts/gaia-gps"
+    "url": "https://www.producthunt.com/posts/digital-socrates-2-0-2"
   },
   {
     "id": 5,
-    "title": "Title: Product - 22",
-    "leadtext": "Leadtext: Product - 2",
-    "vote": 0,
+    "title": "Card Diary",
+    "leadtext": "An minimalistic journalling, diary app",
+    "vote": 115,
     "image": {
-      "src": "https://ph-files.imgix.net/fba5b9a4-0d3c-4806-ba4b-10f27398c60d?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+      "src": "https://ph-files.imgix.net/1074d076-a76e-4ed5-a25f-7ecfb3aca806?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
     },
     "credit": {
-      "name": "Satyajit Dey",
+      "name": "Yuan Fu",
       "photo": {
-        "src": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png"
+        "src": "https://ph-avatars.imgix.net/1651147/original?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=140&h=140&fit=crop&dpr=2"
       },
-      "link": "http://profile-link.com/1"
+      "link": "https://www.producthunt.com/@yuan_fu"
     },
-    "url": "https://www.producthunt.com/posts/gaia-gps"
+    "url": "https://www.producthunt.com/posts/card-diary"
+  },
+  {
+    "id": 6,
+    "title": "Undermyfork",
+    "leadtext": "Nutrition advice based on blood sugar data",
+    "vote": 365,
+    "image": {
+      "src": "https://ph-files.imgix.net/cb201369-c8dc-4b65-b81d-1b03c352a006?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+    },
+    "credit": {
+      "name": "Mike Ushakov",
+      "photo": {
+        "src": "https://ph-avatars.imgix.net/581831/original?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=140&h=140&fit=crop&dpr=2"
+      },
+      "link": "https://www.producthunt.com/@ya_mike"
+    },
+    "url": "https://www.producthunt.com/posts/undermyfork"
+  },
+  {
+    "id": 7,
+    "title": "Symfonisk Speaker",
+    "leadtext": "A new speaker by Sonos and IKEA",
+    "vote": 140,
+    "image": {
+      "src": "https://ph-files.imgix.net/00d853b0-8137-474c-a3bc-207f48d975d2?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+    },
+    "credit": {
+      "name": "Aleksander Skjoelsvik",
+      "photo": {
+        "src": "https://ph-avatars.imgix.net/84999/original?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=140&h=140&fit=crop&dpr=2"
+      },
+      "link": "https://www.producthunt.com/@alekplay"
+    },
+    "url": "https://www.producthunt.com/posts/symfonisk-speaker"
+  },
+  {
+    "id": 8,
+    "title": "Twemoji 12.0",
+    "leadtext": "Twitter’s open source emoji featuring 3,071 emojis for free",
+    "vote": 599,
+    "image": {
+      "src": "https://ph-files.imgix.net/3f177e77-0066-471e-85d9-fa6464667d87?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=80&h=80&fit=crop&dpr=2"
+    },
+    "credit": {
+      "name": "Frances Coronel",
+      "photo": {
+        "src": "https://ph-avatars.imgix.net/1345535/original?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=140&h=140&fit=crop&dpr=2"
+      },
+      "link": "https://www.producthunt.com/@fvc"
+    },
+    "url": "https://www.producthunt.com/posts/twemoji-12-0"
   }
 ]
