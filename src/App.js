@@ -40,7 +40,7 @@ class App extends Component {
     );
   }
 
-  destructureProduct(product) {
+  static destructureProduct(product) {
     const {
       id, title, leadtext, vote,
       image: {src}, credit: {name, photo: {src: photoLink}, link}, url
@@ -67,13 +67,13 @@ class App extends Component {
       console.log('searchTerm: ' + searchTerm);
       products.forEach(p => {
         if (p.title.indexOf(searchTerm) > 0) {
-          resultItems.push(this.destructureProduct(p));
+          resultItems.push(App.destructureProduct(p));
         }
 
       });
     } else {
       products.forEach(p => {
-        resultItems.push(this.destructureProduct(p));
+        resultItems.push(App.destructureProduct(p));
       });
     }
 
