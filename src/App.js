@@ -80,23 +80,28 @@ class App extends Component {
     this.setState({searchTerm: searchTerm.toLowerCase()});
     this.clearSearchResults();
 
-    let resultItems = [];
+    let resultItems = this.searchByTerm(searchTerm);
+    this.setState({searchResults: resultItems});
+  }
+
+  searchByTerm(searchTerm) {
+    let results = [];
     if (searchTerm.trim()) {
       console.log('searchTerm: ' + searchTerm);
       this.state.products.forEach(p => {
         if (p.title.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) {
-          resultItems.push(p);
+          results.push(p);
         }
 
       });
     } else {
       this.state.products.forEach(p => {
-        resultItems.push(p);
+        results.push(p);
       });
     }
 
-    resultItems.sort((a, b) => b.vote - a.vote);
-    this.setState({searchResults: resultItems});
+    results.sort((a, b) => b.vote - a.vote);
+    return results;
   }
 
   clearSearchResults() {
