@@ -9,6 +9,11 @@ import './App.css';
 class App extends Component {
 
   state = {
+    //This property holds all the product from the products.json file.
+    //Practically we don't need this extra property but here I have introduced it
+    //because I don't want to modify(when we up vote for a given product) the original datasource: products.json,
+    //rather I want to do an in-memory modification of the product item after up voting.
+    //Sorry for the big comments :-)
     products: [],
     searchTerm: '',
     searchResults: []
