@@ -68,7 +68,8 @@ class App extends Component {
   }
 
   onSearch(searchTerm) {
-    this.setState({searchResults: []});
+    this.clearSearchResults();
+
     let resultItems = [];
     if (searchTerm.trim()) {
       console.log('searchTerm: ' + searchTerm);
@@ -86,6 +87,10 @@ class App extends Component {
 
     resultItems.sort((a, b) => b.vote - a.vote);
     this.setState({searchResults: resultItems});
+  }
+
+  clearSearchResults() {
+    this.setState({searchResults: []});
   }
 }
 
