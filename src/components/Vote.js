@@ -4,7 +4,7 @@ class Vote extends Component {
 
   render() {
     return (
-        <button className="vote" onClick={this.props.voteUp}>
+        <button className="vote" onClick={this.props.resultItemCallback}>
           &#x25B2;
           <span> {this.props.score}</span>
         </button>

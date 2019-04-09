@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import Vote from "./Vote";
 import ByLine from "./ByLine";
+import PropTypes from 'prop-types';
 
 class ResultItem extends Component {
 
-  /*state = {
+  state = {
     result: this.props.item
-  };*/
+  };
 
   render() {
     return (
@@ -19,7 +20,7 @@ class ResultItem extends Component {
           </div>
           <div className="content">
             <Vote score={this.props.item.vote}
-                  voteUp={this.voteUp}/>
+                  resultItemCallback={this.resultItemCallback}/>
 
             <a href={this.props.item.url} className="product-link"><h3
                 className="title">{this.props.item.title}</h3></a>
@@ -33,12 +34,15 @@ class ResultItem extends Component {
     );
   }
 
-  voteUp() {
-    /*console.log(this.state.result.item);
-    this.state.result.item.vote += 1;
-    console.log(`Vote: ${this.state.result.item.vote}`);*/
-  }
+  resultItemCallback = () => {
+    this.state.result.vote = this.state.result.vote + 1;
+    this.props.resultListCallback();
+  };
 
 }
+
+ResultItem.propTypes = {
+  voteUp: PropTypes.func
+};
 
 export default ResultItem;

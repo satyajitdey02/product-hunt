@@ -16,6 +16,11 @@ class App extends Component {
     this.onSearch('');
   }
 
+  appCallback = () => {
+    this.state.products.sort((a, b) => b.vote - a.vote);
+    this.setState({products: this.state.products});
+  };
+
   render() {
     return (
         <div className="container App">
@@ -27,7 +32,8 @@ class App extends Component {
           <SearchBar onSearchChange={term => this.onSearch(term)}/>
 
           <div className="row search-results">
-            <ResultList list={this.state.products}/>
+            <ResultList list={this.state.products}
+                        appCallback={this.appCallback}/>
           </div>
 
         </div>
@@ -56,7 +62,6 @@ class App extends Component {
 
   onSearch(searchTerm) {
     this.setState({products: []});
-    console.log(this.state.products);
     let resultItems = [];
     if (searchTerm.trim()) {
       console.log('searchTerm: ' + searchTerm);
@@ -74,7 +79,6 @@ class App extends Component {
 
     resultItems.sort((a, b) => b.vote - a.vote);
     this.setState({products: resultItems});
-    console.log(this.state.products);
   }
 }
 

@@ -5,7 +5,8 @@ class ResultList extends Component {
 
   render() {
     let liMarkup = this.props.list.map(
-        item => <ResultItem key={item.id} item={item}/>);
+        item => <ResultItem key={item.id} item={item}
+                            resultListCallback={this.resultListCallback}/>);
 
     return (
         <ul className="col result-list">
@@ -13,6 +14,10 @@ class ResultList extends Component {
         </ul>
     );
   }
+
+  resultListCallback = () => {
+    this.props.appCallback();
+  };
 }
 
 export default ResultList;
