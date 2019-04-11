@@ -35,6 +35,8 @@ class ResultItem extends Component {
   }
 
   resultItemCallback = () => {
+    //TODO: Not a good idea to mutate state as like following without setState.
+    //Dear Instructors, Can we do something better?
     this.state.result.vote = this.state.result.vote + 1;
     this.props.resultListCallback();
   };
