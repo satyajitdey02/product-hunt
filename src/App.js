@@ -31,7 +31,7 @@ class App extends Component {
     this.setState({products: formattedProds, searchResults: formattedProds});
   }
 
-  appCallback = () => {
+  onSearchResultsLoad = () => {
     let searchResults = this.state.searchResults;
     searchResults.sort((a, b) => b.vote - a.vote);
     this.setState({searchResults: searchResults});
@@ -47,7 +47,7 @@ class App extends Component {
           <div className="row search-results">
             <ResultList searchTerm={this.state.searchTerm}
                         searchResults={this.state.searchResults}
-                        appCallback={this.appCallback}/>
+                        onSearchResultsLoad={this.onSearchResultsLoad}/>
           </div>
         </div>
     );

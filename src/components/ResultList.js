@@ -13,14 +13,14 @@ class ResultList extends Component {
     let liMarkup = this.props.searchResults.map(
         item => <ResultItem key={item.id}
                             item={item}
-                            resultListCallback={this.resultListCallback}/>);
+                            onSearchItemLoad={this.onSearchItemLoad}/>);
     return (<ul className="col result-list">
       {liMarkup}
     </ul>);
   }
 
-  resultListCallback = () => {
-    this.props.appCallback();
+  onSearchItemLoad = () => {
+    this.props.onSearchResultsLoad();
   };
 }
 

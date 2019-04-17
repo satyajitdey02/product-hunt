@@ -20,7 +20,7 @@ class ResultItem extends Component {
           </div>
           <div className="content">
             <Vote score={this.props.item.vote}
-                  resultItemCallback={this.resultItemCallback}/>
+                  onVoteUp={this.onVoteUp}/>
 
             <a href={this.props.item.url} className="product-link"><h3
                 className="title">{this.props.item.title}</h3></a>
@@ -34,11 +34,11 @@ class ResultItem extends Component {
     );
   }
 
-  resultItemCallback = () => {
+  onVoteUp = () => {
     //TODO: Not a good idea to mutate state as like following without setState.
     //Dear Instructors, Can we do something better?
     this.state.result.vote = this.state.result.vote + 1;
-    this.props.resultListCallback();
+    this.props.onSearchItemLoad();
   };
 
 }
