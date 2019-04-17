@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class Vote extends Component {
 
@@ -12,6 +13,8 @@ class Vote extends Component {
   }
 }
 
-Vote.propTypes = {};
+Vote.propTypes = {
+  score: PropTypes.number
+};
 
 export default Vote;
