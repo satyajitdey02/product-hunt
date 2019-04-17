@@ -45,7 +45,8 @@ class ResultItem extends Component {
 }
 
 ResultItem.propTypes = {
-  voteUp: PropTypes.func
+  item: PropTypes.object,
+  onSearchItemLoad: PropTypes.func
 };
 
 export default ResultItem;
