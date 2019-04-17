@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import ResultItem from "./ResultItem";
 import MessageBox from "./MessageBox";
 
+import PropTypes from 'prop-types';
+
 class ResultList extends Component {
 
   render() {
@@ -23,5 +25,11 @@ class ResultList extends Component {
     this.props.onSearchResultsLoad();
   };
 }
+
+ResultList.propTypes = {
+  searchTerm: PropTypes.string,
+  searchResults: PropTypes.array,
+  onSearchResultsLoad: PropTypes.func,
+};
 
 export default ResultList;
