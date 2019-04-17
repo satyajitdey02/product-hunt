@@ -35,9 +35,10 @@ class ResultItem extends Component {
   }
 
   onVoteUp = () => {
-    //TODO: Not a good idea to mutate state as like following without setState.
-    //Dear Instructors, Can we do something better?
-    this.state.result.vote = this.state.result.vote + 1;
+    let resultItem = this.state.result;
+    resultItem.vote = resultItem.vote + 1;
+    this.setState({result: resultItem});
+
     this.props.onSearchItemLoad();
   };
 
