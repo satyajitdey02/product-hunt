@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ByLine = ({credit}) => {
 
@@ -12,6 +13,10 @@ const ByLine = ({credit}) => {
 
   );
 
+};
+
+ByLine.propTypes = {
+  credit: PropTypes.object
 };
 
 export default ByLine;
