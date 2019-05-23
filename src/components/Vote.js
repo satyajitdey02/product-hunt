@@ -1,16 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class Vote extends Component {
-
-  render() {
-    return (
-        <button className="vote" onClick={this.props.onVoteUp}>
-          <img src="triangle.png" alt=""/>
-          <span className="score">&nbsp;&nbsp;{this.props.score}</span>
-        </button>
-    );
-  }
+const Vote = ({score, onVoteUp}) => {
+  return (
+      <button className="vote" onClick={onVoteUp}>
+        <img src="triangle.png" alt=""/>
+        <span className="score">&nbsp;&nbsp;{score}</span>
+      </button>
+  );
 }
 
 Vote.propTypes = {
