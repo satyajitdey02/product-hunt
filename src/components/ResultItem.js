@@ -1,41 +1,41 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Vote from "./Vote";
 import ByLine from "./ByLine";
 import PropTypes from 'prop-types';
 
-class ResultItem extends Component {
+const ResultItem = ({item, onSearchItemLoad}) => {
 
+  const {
+    title,
+    leadtext,
+    credit,
+    vote,
+    image,
+    url
+  } = item;
 
+  return (
+      <li className="result-item clearfix">
 
-  render() {
-    return (
-        <li className="result-item clearfix">
+        <div className="thumbnail">
+          <img
+              src={image}
+              alt={title}/>
+        </div>
+        <div className="content">
+          <Vote score={vote}
+                onVoteUp={onSearchItemLoad}/>
 
-          <div className="thumbnail">
-            <img
-                src={this.props.item.image}
-                alt="Prod-1"/>
-          </div>
-          <div className="content">
-            <Vote score={this.props.item.vote}
-                  onVoteUp={this.onVoteUp}/>
+          <a href={url} className="product-link"><h3
+              className="title">{title}</h3></a>
 
-            <a href={this.props.item.url} className="product-link"><h3
-                className="title">{this.props.item.title}</h3></a>
+          <p className="leadtext">{leadtext}</p>
 
-            <p className="leadtext">{this.props.item.leadtext}</p>
+          <ByLine credit={credit}/>
+        </div>
 
-            <ByLine credit={this.props.item.credit}/>
-          </div>
-
-        </li>
-    );
-  }
-
-  onVoteUp = () => {
-    this.props.onSearchItemLoad(this.props.item.id);
-  };
-
+      </li>
+  );
 }
 
 ResultItem.propTypes = {

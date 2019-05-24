@@ -38,6 +38,7 @@ class App extends Component {
         item.vote++;
       }
     });
+
     searchResults.sort((a, b) => b.vote - a.vote);
     this.setState({searchResults: searchResults});
   };
