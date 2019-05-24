@@ -5,9 +5,7 @@ import PropTypes from 'prop-types';
 
 class ResultItem extends Component {
 
-  state = {
-    result: this.props.item
-  };
+
 
   render() {
     return (
@@ -35,11 +33,7 @@ class ResultItem extends Component {
   }
 
   onVoteUp = () => {
-    let resultItem = this.state.result;
-    resultItem.vote = resultItem.vote + 1;
-    this.setState({result: resultItem});
-
-    this.props.onSearchItemLoad();
+    this.props.onSearchItemLoad(this.props.item.id);
   };
 
 }

@@ -31,8 +31,13 @@ class App extends Component {
     this.setState({products: formattedProds, searchResults: formattedProds});
   }
 
-  onSearchResultsLoad = () => {
+  onSearchResultsLoad = (id) => {
     let searchResults = this.state.searchResults;
+    searchResults.forEach(item => {
+      if (item.id === id) {
+        item.vote++;
+      }
+    });
     searchResults.sort((a, b) => b.vote - a.vote);
     this.setState({searchResults: searchResults});
   };

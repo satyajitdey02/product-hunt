@@ -15,15 +15,11 @@ class ResultList extends Component {
     let liMarkup = this.props.searchResults.map(
         item => <ResultItem key={item.id}
                             item={item}
-                            onSearchItemLoad={this.onSearchItemLoad}/>);
+                            onSearchItemLoad={this.props.onSearchResultsLoad}/>);
     return (<ul className="col result-list">
       {liMarkup}
     </ul>);
   }
-
-  onSearchItemLoad = () => {
-    this.props.onSearchResultsLoad();
-  };
 }
 
 ResultList.propTypes = {
