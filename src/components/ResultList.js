@@ -1,29 +1,27 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ResultItem from "./ResultItem";
 import MessageBox from "./MessageBox";
 
 import PropTypes from 'prop-types';
 
-class ResultList extends Component {
+const ResultList = ({searchTerm, searchResults, onSearchResultsLoad}) => {
+  const onSearchItemLoad = (id) => {
+    onSearchResultsLoad(id);
+  };
 
-  render() {
-    if (this.props.searchResults.length <= 0) {
-      let message = `No result found for the query: "${this.props.searchTerm}"`;
-      return (<MessageBox message={message}/>);
-    }
-
-    let liMarkup = this.props.searchResults.map(
-        item => <ResultItem key={item.id}
-                            item={item}
-                            onSearchItemLoad={this.onSearchItemLoad}/>);
-    return (<ul className="col result-list">
-      {liMarkup}
-    </ul>);
+  if (searchResults.length <= 0) {
+    let message = `No result found for the query: "${searchTerm}"`;
+    return (<MessageBox message={message}/>);
   }
 
-  onSearchItemLoad = () => {
-    this.props.onSearchResultsLoad();
-  };
+  let liMarkup = searchResults.map(
+      item => <ResultItem key={item.id}
+                          item={item}
+                          onSearchItemLoad={() => onSearchItemLoad(item.id)}/>);
+  return (<ul className="col result-list">
+    {liMarkup}
+  </ul>);
+
 }
 
 ResultList.propTypes = {
