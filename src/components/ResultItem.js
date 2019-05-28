@@ -3,7 +3,7 @@ import Vote from "./Vote";
 import ByLine from "./ByLine";
 import PropTypes from 'prop-types';
 
-const ResultItem = ({item, onSearchItemLoad}) => {
+const ResultItem = ({item, onSearchItemReload}) => {
 
   const {image, vote, title, leadtext, credit, url} = item;
 
@@ -17,7 +17,7 @@ const ResultItem = ({item, onSearchItemLoad}) => {
         </div>
         <div className="content">
           <Vote score={vote}
-                onVoteUp={onSearchItemLoad}/>
+                onVoteUp={onSearchItemReload}/>
 
           <a href={url} className="product-link"><h3
               className="title">{title}</h3></a>
@@ -34,7 +34,7 @@ const ResultItem = ({item, onSearchItemLoad}) => {
 
 ResultItem.propTypes = {
   item: PropTypes.object,
-  onSearchItemLoad: PropTypes.func
+  onSearchItemReload: PropTypes.func
 };
 
 export default ResultItem;
