@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import SearchBar from "./components/SearchBar";
-import ResultList from "./components/ResultList";
+
 
 import products from './data/products';
 
 import './App.css';
-import Header from "./components/Header";
+import NavigationBar from "./components/NavigationBar";
+import SearchResult from "./components/SearchResult";
 
 class App extends Component {
 
@@ -46,15 +46,11 @@ class App extends Component {
   render() {
     return (
         <div className="container App">
-          <Header heading='Popular Products'/>
+          <NavigationBar/>
 
-          <SearchBar onSearchChange={term => this.onSearch(term)}/>
-
-          <div className="row search-results">
-            <ResultList searchTerm={this.state.searchTerm}
-                        searchResults={this.state.searchResults}
-                        onSearchResultsReload={this.onSearchResultsReload}/>
-          </div>
+          <SearchResult searchTerm={this.state.searchTerm}
+                      searchResults={this.state.searchResults}
+                      onSearchResultsReload={this.onSearchResultsReload}/>
         </div>
     );
   }

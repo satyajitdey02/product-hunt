@@ -3,8 +3,9 @@ import ResultItem from "./ResultItem";
 import MessageBox from "./MessageBox";
 
 import PropTypes from 'prop-types';
+import Header from "./Header";
 
-const ResultList = ({searchTerm, searchResults, onSearchResultsReload}) => {
+const SearchResult = ({searchTerm, searchResults, onSearchResultsReload}) => {
 
   if (searchResults.length <= 0) {
     let message = `No result found for the query: "${searchTerm}"`;
@@ -14,17 +15,22 @@ const ResultList = ({searchTerm, searchResults, onSearchResultsReload}) => {
   let liMarkup = searchResults.map(
       item => <ResultItem key={item.id}
                           item={item}
-                          onSearchItemReload={() => onSearchResultsReload(item.id)}/>);
-  return (<ul className="col result-list">
-    {liMarkup}
-  </ul>);
+                          onSearchItemReload={() => onSearchResultsReload(
+                              item.id)}/>);
+  return (
+      <div className="row search-results">
+        <Header heading='Popular Products'/>
+        <ul className="col-md-12 result-list">
+          {liMarkup}
+        </ul>
+      </div>);
 
 }
 
-ResultList.propTypes = {
+SearchResult.propTypes = {
   searchTerm: PropTypes.string,
   searchResults: PropTypes.array,
   onSearchResultsReload: PropTypes.func,
 };
 
-export default ResultList;
+export default SearchResult;

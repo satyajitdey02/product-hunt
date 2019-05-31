@@ -19,13 +19,28 @@ header.row.header {
 }
 
 .header h3 {
+  text-align: left;
   font-weight: bold;
   color: #212121;
 }
 
+.nav-bar.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+}
+
 .search-bar {
-  margin: 20px 0 20px 0;
   text-align: center;
+  padding-left: 0;
+}
+
+.auth-bar {
+
 }
 
 .search-bar .col {
@@ -42,7 +57,8 @@ header.row.header {
 }
 
 .search-results {
-  margin: 0 auto;
+  margin: 20px auto;
+  max-width: 810px;
 }
 
 /*.result-item:hover {

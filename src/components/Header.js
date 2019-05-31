@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const Header = ({heading}) => {
   return (
-      <header className="row header">
-        <h3 className="col">{heading}</h3>
+      <header className="col-md-12 header">
+        <h3>{heading}</h3>
         <hr/>
       </header>
   );
