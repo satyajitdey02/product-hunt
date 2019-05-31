@@ -39,8 +39,8 @@ header.row.header {
   padding-left: 0;
 }
 
-.auth-bar {
-
+.auth-bar a {
+  line-height: 30px;
 }
 
 .search-bar .col {
