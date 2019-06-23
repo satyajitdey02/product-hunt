@@ -46,7 +46,7 @@ class App extends Component {
   render() {
     return (
         <div className="container App">
-          <NavigationBar/>
+          <NavigationBar onSearch={term=> this.onSearch(term)}/>
 
           <SearchResult searchTerm={this.state.searchTerm}
                       searchResults={this.state.searchResults}
@@ -82,14 +82,14 @@ class App extends Component {
   }
 
   /*
-  * In this method the searchTerm is searched into the concatenated text of
-  * title and leadtext and sorted in descending order of vote before return
+  * In this method the searchTerm is searched into
+  * title and sorted in descending order of vote before return
   **/
   searchByTerm(searchTerm) {
     let results = [];
     if (searchTerm.trim()) {
       this.state.products.forEach(p => {
-        let text = `${p.title} ${p.leadtext}`.toLowerCase();
+        let text = `${p.title}`.toLowerCase();
         if (text.indexOf(searchTerm.toLowerCase()) >= 0) {
           results.push(p);
         }

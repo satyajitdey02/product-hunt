@@ -3,10 +3,11 @@ import SearchBar from "./SearchBar";
 import AuthBar from "./AuthBar";
 
 
-const NavigationBar = (props) => {
+const NavigationBar = ({onSearch}) => {
+
   return (
       <div className="row nav-bar sticky">
-        <SearchBar onSearchChange={term => this.onSearch(term)}/>
+        <SearchBar onSearchChange={onSearch}/>
         <AuthBar />
       </div>
   );
