@@ -1,14 +1,17 @@
 import React from 'react';
 import SearchBar from "./SearchBar";
-import AuthBar from "./AuthBar";
-
+import LoginLogoutButton from "./LoginLogoutButton";
 
 const NavigationBar = ({onSearch}) => {
 
   return (
       <div className="row nav-bar sticky">
         <SearchBar onSearchChange={onSearch}/>
-        <AuthBar />
+        <div className="col-md-2 auth-bar">
+          <span>
+            <LoginLogoutButton/>
+          </span>
+        </div>
       </div>
   );
 };

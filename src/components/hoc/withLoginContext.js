@@ -5,7 +5,13 @@ export function withLoginContext(Component) {
   return function WrapperComponent(props) {
     return (
         <LoginContext.Consumer>
-          {(userObj) => <Component {...props} loginContext={userObj}/>}
+          {({userObj, onLoginClick, onLogoutClick}) => (
+              <Component
+                  {...props}
+                  userObj={userObj}
+                  onLoginClick={onLoginClick}
+                  onLogoutClick={onLogoutClick}
+              />)}
         </LoginContext.Consumer>
     );
   }

@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 
 import products from './data/products';
 
 import './App.css';
-import NavigationBar from "./components/NavigationBar";
-import SearchResult from "./components/SearchResult";
+import Modal from './components/Modal';
+import LoginForm from './components/LoginForm';
+import NavigationBar from './components/NavigationBar';
+import SearchResult from './components/SearchResult';
 import LoginProvider from './components/providers/LoginProvider';
 
 class App extends Component {
@@ -19,7 +20,7 @@ class App extends Component {
     products: [],
     searchTerm: '',
     searchResults: [],
-    userObj: {userName: 'satyajit'},
+    /*userObj: {userName: 'satyajit'},*/
     userObj: null,
     loginModal: false,
   };
@@ -35,10 +36,28 @@ class App extends Component {
     this.setState({products: formattedProds, searchResults: formattedProds});
   }
 
-  showLoginModal = () => {
+  showLoginModal = (e) => {
+    e.preventDefault();
     this.setState({
       loginModal: true,
     })
+  }
+
+  handleLogout = (e) => {
+    e.preventDefault();
+    this.setState({
+      userObj: null,
+    });
+  }
+
+  handleLogin = (formValues) => {
+    if (formValues.userName) {
+      this.setState({
+        userObj: {
+          userName: formValues.userName
+        }, loginModal: false
+      });
+    }
   }
 
   onSearchResultsReload = (id) => {
@@ -54,20 +73,25 @@ class App extends Component {
   };
 
   render() {
+    const {loginModal} = this.state;
     return (
-        <LoginProvider userObj={this.state.userObj}>
-          {/*<LoginModalProvider onClick={this.showLoginModal}>*/}
+        <LoginProvider
+            userObj={this.state.userObj}
+            onLoginClick={this.showLoginModal}
+            onLogoutClick={this.handleLogout}>
           <div className="container App">
-            <NavigationBar onSearch={term=> this.onSearch(term)}/>
+            <NavigationBar onSearch={term => this.onSearch(term)}/>
 
             <SearchResult searchTerm={this.state.searchTerm}
-                        searchResults={this.state.searchResults}
-                        onSearchResultsReload={this.onSearchResultsReload}/>
+                          searchResults={this.state.searchResults}
+                          onSearchResultsReload={this.onSearchResultsReload}/>
           </div>
-          {/*<Modal>*/}
-            {/*<Child/>*/}
-          {/*</Modal>*/}
-          {/*</LoginModalProvider>*/}
+          {loginModal &&
+          <Modal>
+            <LoginForm onLogin={this.handleLogin}/>
+          </Modal>
+          }
+
         </LoginProvider>
     );
   }
@@ -129,46 +153,3 @@ class App extends Component {
 
 export default App;
 
-
-// const modalRoot = document.getElementById('modal-root');
-//
-// class Modal extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.el = document.createElement('div');
-//   }
-//
-//   componentDidMount() {
-//     // The portal element is inserted in the DOM tree after
-//     // the Modal's children are mounted, meaning that children
-//     // will be mounted on a detached DOM node. If a child
-//     // component requires to be attached to the DOM tree
-//     // immediately when mounted, for example to measure a
-//     // DOM node, or uses 'autoFocus' in a descendant, add
-//     // state to Modal and only render the children when Modal
-//     // is inserted in the DOM tree.
-//     modalRoot.appendChild(this.el);
-//   }
-//
-//   componentWillUnmount() {
-//     modalRoot.removeChild(this.el);
-//   }
-//
-//   render() {
-//     return ReactDOM.createPortal(
-//         this.props.children,
-//         this.el,
-//     );
-//   }
-// }
-//
-//
-// function Child() {
-//   // The click event on this button will bubble up to parent,
-//   // because there is no 'onClick' attribute defined
-//   return (
-//       <div className="modal">
-//         <button>Click to modal</button>
-//       </div>
-//   );
-// }

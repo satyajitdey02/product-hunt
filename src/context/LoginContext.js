@@ -1,8 +1,8 @@
 import React from 'react';
 
-const  LoginContex = React.createContext({
+const LoginContex = React.createContext({
   userName: null,
-  userInfo: {},
+  userInfo: {}
 });
 
 export default LoginContex;

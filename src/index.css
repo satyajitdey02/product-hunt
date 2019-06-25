@@ -87,7 +87,7 @@ li.result-item {
   margin-bottom: 10px;
 }
 
-.content button.vote .score  {
+.content button.vote .score {
   color: #262626;
   font-weight: 800;
 }
@@ -138,4 +138,26 @@ a.product-link {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-container {
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 50%;
+  background: #FFFFFF;
+  padding: 20px;
+  text-align: center;
 }
