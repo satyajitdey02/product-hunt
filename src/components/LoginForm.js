@@ -18,8 +18,6 @@ export default class LoginForm extends Component {
     }
   }
 
-
-
   handleSubmit = (event) => {
     const {onLogin} = this.props;
     event.preventDefault();
@@ -31,23 +29,29 @@ export default class LoginForm extends Component {
     return (
         <div className="modal">
           <div className="login-form-container">
-            <form onSubmit={this.handleSubmit}>
-              <input
-                  type="text"
-                  name={'userName'}
-                  placeholder={'Enter User Name'}
-                  value={this.state.userName}
-                  onChange={this.handleChange}
-              />
+            <form onSubmit={this.handleSubmit} className="container">
+              <div className="row user-name">
+                <input className="col-md-12"
+                       type="text"
+                       name={'userName'}
+                       placeholder={'Enter User Name'}
+                       value={this.state.userName}
+                       onChange={this.handleChange}
+                />
+              </div>
 
-              <input
-                  type="password"
-                  name={'password'}
-                  placeholder={'Enter Password'}
-                  value={this.state.password}
-                  onChange={this.handleChange}
-              />
-              <input type={'submit'} value={'Login'}/>
+              <div className="row password">
+                <input className="col-md-12"
+                       type="password"
+                       name={'password'}
+                       placeholder={'Enter Password'}
+                       value={this.state.password}
+                       onChange={this.handleChange}
+                />
+              </div>
+              <div className="row btn-login">
+                <input className="col-md-3" type={'submit'} value={'Login'}/>
+              </div>
             </form>
           </div>
         </div>

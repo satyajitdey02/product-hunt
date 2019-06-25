@@ -153,11 +153,11 @@ a.product-link {
 }
 
 .login-form-container {
-  width: 50%;
-  height: 50%;
-  left: 50%;
-  top: 50%;
   background: #FFFFFF;
   padding: 20px;
   text-align: center;
+}
+
+.user-name, .password {
+  margin-bottom: 20px;
 }
