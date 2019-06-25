@@ -1,11 +1,20 @@
 import React from 'react';
+import {withLoginContext} from "./hoc/withLoginContext";
 
 const AuthBar = (props) => {
+  const userObj = props.loginContext
+  console.log('Login context val')
+  console.log(userObj)
   return (
       <div className="col-md-2 auth-bar">
-        <span><a href="#">Login</a> | <a href="#">Logout</a></span>
+        <span>
+          {userObj && userObj.userName
+              ? <a href="#">Logout</a>
+              : <a href="#">Login</a>
+          }
+        </span>
       </div>
   );
 };
 
-export default AuthBar;
+export default withLoginContext(AuthBar);

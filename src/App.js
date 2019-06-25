@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-
+import ReactDOM from 'react-dom';
 
 import products from './data/products';
 
 import './App.css';
 import NavigationBar from "./components/NavigationBar";
 import SearchResult from "./components/SearchResult";
+import LoginProvider from './components/providers/LoginProvider';
 
 class App extends Component {
 
@@ -17,7 +18,10 @@ class App extends Component {
     //Sorry for the big comments :-)
     products: [],
     searchTerm: '',
-    searchResults: []
+    searchResults: [],
+    userObj: {userName: 'satyajit'},
+    userObj: null,
+    loginModal: false,
   };
 
   componentDidMount() {
@@ -29,6 +33,12 @@ class App extends Component {
 
     formattedProds.sort((a, b) => b.vote - a.vote);
     this.setState({products: formattedProds, searchResults: formattedProds});
+  }
+
+  showLoginModal = () => {
+    this.setState({
+      loginModal: true,
+    })
   }
 
   onSearchResultsReload = (id) => {
@@ -45,13 +55,20 @@ class App extends Component {
 
   render() {
     return (
-        <div className="container App">
-          <NavigationBar onSearch={term=> this.onSearch(term)}/>
+        <LoginProvider userObj={this.state.userObj}>
+          {/*<LoginModalProvider onClick={this.showLoginModal}>*/}
+          <div className="container App">
+            <NavigationBar onSearch={term=> this.onSearch(term)}/>
 
-          <SearchResult searchTerm={this.state.searchTerm}
-                      searchResults={this.state.searchResults}
-                      onSearchResultsReload={this.onSearchResultsReload}/>
-        </div>
+            <SearchResult searchTerm={this.state.searchTerm}
+                        searchResults={this.state.searchResults}
+                        onSearchResultsReload={this.onSearchResultsReload}/>
+          </div>
+          {/*<Modal>*/}
+            {/*<Child/>*/}
+          {/*</Modal>*/}
+          {/*</LoginModalProvider>*/}
+        </LoginProvider>
     );
   }
 
@@ -111,3 +128,47 @@ class App extends Component {
 }
 
 export default App;
+
+
+// const modalRoot = document.getElementById('modal-root');
+//
+// class Modal extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.el = document.createElement('div');
+//   }
+//
+//   componentDidMount() {
+//     // The portal element is inserted in the DOM tree after
+//     // the Modal's children are mounted, meaning that children
+//     // will be mounted on a detached DOM node. If a child
+//     // component requires to be attached to the DOM tree
+//     // immediately when mounted, for example to measure a
+//     // DOM node, or uses 'autoFocus' in a descendant, add
+//     // state to Modal and only render the children when Modal
+//     // is inserted in the DOM tree.
+//     modalRoot.appendChild(this.el);
+//   }
+//
+//   componentWillUnmount() {
+//     modalRoot.removeChild(this.el);
+//   }
+//
+//   render() {
+//     return ReactDOM.createPortal(
+//         this.props.children,
+//         this.el,
+//     );
+//   }
+// }
+//
+//
+// function Child() {
+//   // The click event on this button will bubble up to parent,
+//   // because there is no 'onClick' attribute defined
+//   return (
+//       <div className="modal">
+//         <button>Click to modal</button>
+//       </div>
+//   );
+// }
