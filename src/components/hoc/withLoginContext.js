@@ -1,10 +1,10 @@
 import React from 'react';
-import LoginContext from './../../context/LoginContext';
+import AuthContext from './../../context/AuthContext';
 
 export function withLoginContext(Component) {
   return function WrapperComponent(props) {
     return (
-        <LoginContext.Consumer>
+        <AuthContext.Consumer>
           {({userObj, onLoginClick, onLogoutClick}) => (
               <Component
                   {...props}
@@ -12,7 +12,7 @@ export function withLoginContext(Component) {
                   onLoginClick={onLoginClick}
                   onLogoutClick={onLogoutClick}
               />)}
-        </LoginContext.Consumer>
+        </AuthContext.Consumer>
     );
   }
 }

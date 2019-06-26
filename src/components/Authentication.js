@@ -1,10 +1,9 @@
 import React from 'react';
 import {withLoginContext} from "./hoc/withLoginContext";
 
-const LoginLogoutButton = (props) => {
+const Authentication = (props) => {
   const {userObj, onLoginClick, onLogoutClick} = props;
-  console.log('Login context val')
-  console.log(userObj)
+  console.log(userObj);
   return (
       <React.Fragment>
         {userObj && userObj.userName
@@ -15,4 +14,4 @@ const LoginLogoutButton = (props) => {
   );
 };
 
-export default withLoginContext(LoginLogoutButton);
+export default withLoginContext(Authentication);

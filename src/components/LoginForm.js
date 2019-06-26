@@ -16,14 +16,14 @@ export default class LoginForm extends Component {
     } else if (event.target.name === 'password') {
       this.setState({password: event.target.value});
     }
-  }
+  };
 
   handleSubmit = (event) => {
     const {onLogin} = this.props;
     event.preventDefault();
     console.log(this.state.userName);
     onLogin({userName: this.state.userName});
-  }
+  };
 
   render() {
     return (
@@ -50,7 +50,7 @@ export default class LoginForm extends Component {
                 />
               </div>
               <div className="row btn-login">
-                <input className="col-md-3" type={'submit'} value={'Login'}/>
+                <input className="ml-auto" type={'submit'} value={'Login'}/>
               </div>
             </form>
           </div>

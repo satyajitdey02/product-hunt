@@ -7,7 +7,7 @@ import Modal from './components/Modal';
 import LoginForm from './components/LoginForm';
 import NavigationBar from './components/NavigationBar';
 import SearchResult from './components/SearchResult';
-import LoginProvider from './components/providers/LoginProvider';
+import AuthProvider from './components/providers/AuthProvider';
 
 class App extends Component {
 
@@ -41,14 +41,14 @@ class App extends Component {
     this.setState({
       loginModal: true,
     })
-  }
+  };
 
   handleLogout = (e) => {
     e.preventDefault();
     this.setState({
       userObj: null,
     });
-  }
+  };
 
   handleLogin = (formValues) => {
     if (formValues.userName) {
@@ -58,7 +58,7 @@ class App extends Component {
         }, loginModal: false
       });
     }
-  }
+  };
 
   onSearchResultsReload = (id) => {
     let searchResults = this.state.searchResults;
@@ -75,7 +75,7 @@ class App extends Component {
   render() {
     const {loginModal} = this.state;
     return (
-        <LoginProvider
+        <AuthProvider
             userObj={this.state.userObj}
             onLoginClick={this.showLoginModal}
             onLogoutClick={this.handleLogout}>
@@ -92,7 +92,7 @@ class App extends Component {
           </Modal>
           }
 
-        </LoginProvider>
+        </AuthProvider>
     );
   }
 

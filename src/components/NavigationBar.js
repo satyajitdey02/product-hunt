@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from "./SearchBar";
-import LoginLogoutButton from "./LoginLogoutButton";
+import Authentication from "./Authentication";
 
 const NavigationBar = ({onSearch}) => {
 
@@ -9,7 +9,7 @@ const NavigationBar = ({onSearch}) => {
         <SearchBar onSearchChange={onSearch}/>
         <div className="col-md-2 auth-bar">
           <span>
-            <LoginLogoutButton/>
+            <Authentication/>
           </span>
         </div>
       </div>

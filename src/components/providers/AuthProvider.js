@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
-import LoginContext from './../../context/LoginContext';
+import AuthContext from './../../context/AuthContext';
 
-export default class LoginProvider extends Component {
+export default class AuthProvider extends Component {
 
   render() {
     return (
-        <LoginContext.Provider
+        <AuthContext.Provider
             value={{
               userObj: this.props.userObj,
               onLoginClick: this.props.onLoginClick,
               onLogoutClick: this.props.onLogoutClick
             }}>
           {this.props.children}
-        </LoginContext.Provider>
+        </AuthContext.Provider>
     );
   }
 }
