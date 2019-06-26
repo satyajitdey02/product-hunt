@@ -1,5 +1,5 @@
 import React from 'react';
-import {withLoginContext} from "./hoc/withLoginContext";
+import {withAuthContext} from "./hoc/withAuthContext";
 
 const Authentication = (props) => {
   const {userObj, onLoginClick, onLogoutClick} = props;
@@ -14,4 +14,4 @@ const Authentication = (props) => {
   );
 };
 
-export default withLoginContext(Authentication);
+export default withAuthContext(Authentication);

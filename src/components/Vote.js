@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withLoginContext} from "./hoc/withLoginContext";
+import {withAuthContext} from "./hoc/withAuthContext";
 
 const Vote = ({score, onVoteUp, userObj, onLoginClick}) => {
 
@@ -21,4 +21,4 @@ Vote.propTypes = {
   score: PropTypes.number
 };
 
-export default withLoginContext(Vote);
+export default withAuthContext(Vote);

@@ -1,7 +1,7 @@
 import React from 'react';
 import AuthContext from './../../context/AuthContext';
 
-export function withLoginContext(Component) {
+export function withAuthContext(Component) {
   return function WrapperComponent(props) {
     return (
         <AuthContext.Consumer>
